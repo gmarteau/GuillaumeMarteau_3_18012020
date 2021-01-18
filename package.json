@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Repo du projet 3 de la formation [OC]Développeur Web / Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmarteau/GuillaumeMarteau_3_18012020.git"
+  },
+  "author": "Guillaume Marteau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmarteau/GuillaumeMarteau_3_18012020/issues"
+  },
+  "homepage": "https://github.com/gmarteau/GuillaumeMarteau_3_18012020#readme"
+}

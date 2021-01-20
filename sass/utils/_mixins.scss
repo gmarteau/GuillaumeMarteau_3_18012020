@@ -8,7 +8,7 @@
 }
 
 @mixin header-shadow {
-    box-shadow: 0px 2px 5px $clr-hdr-shad;
+    box-shadow: 0px 1px 5px $clr-hdr-shad;
 }
 
 @mixin bg-lighten($clr, $amount) {
@@ -28,6 +28,11 @@
         align-items: center;
     }
     @else if ($box == "card") {
+        border-radius: $item-radius;
+    }
+    @else if ($box == "explain") {
+        width: 98%;
+        height: $item-height;
         border-radius: $item-radius;
     }
     @else {
@@ -68,6 +73,23 @@
     background-position: top;
 }
 
+@mixin ol-style {
+    counter-increment: explain;
+    content: counter(explain);
+    width: $ol-nbr-size;
+    height: $ol-nbr-size;
+    border-radius: 50%;
+    background: $clr-primary;
+    color: #fff;
+    font-size: map-get($font-size, mid);
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -($ol-nbr-size/2);
+}
+
 @mixin list-item-justify {
     display: flex;
     flex-flow: row nowrap;
@@ -88,4 +110,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@mixin partial-underline {
+    content:"";
+    height: 3px;
+    width: 45px;
+    background-color: $clr-tertiary;
+    position: absolute;
+    bottom: -9;
+    left: 0;  
 }

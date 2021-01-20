@@ -1,7 +1,7 @@
 $clr-primary: #9356DC;
 $clr-secondary: #FF79DA;
 $clr-tertiary: #99E2D0;
-$clr-hdr-shad: #6e6e6e;
+$clr-hdr-shad: #7a7a7a;
 $clr-ftr: #303030;
 
 $hdr-height: 70px;
@@ -13,6 +13,8 @@ $icon-size: 1.2rem;
 $btn-height: 50px;
 $btn-width: 60%;
 $btn-radius: 10rem;
+
+$ol-nbr-size: 25px;
 
 $item-height: 70px;
 $item-width: 100%;
@@ -28,5 +30,7 @@ $card-pic-height: $card-height*.7;
 $menu-radius: 3rem;
 $menu-pdg-top: 30px;
 $menu-icn-pdg: 15px;
+$menu-sect-btm: 50px;
+$menu-submit-mrg: $menu-sect-btm / 3;
 
 $ftr-pdg: 30px;

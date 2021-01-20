@@ -10,6 +10,7 @@
     background: white;
     &__header {
         @include menu-hdr-flex;
+        margin-bottom: 20px;
         &__name {
             @include logo-typo;
         }
@@ -18,21 +19,22 @@
         }
     }
     &__section {
+        margin-bottom: $menu-sect-btm;
         &__title {
-            font-size: map-get($font-size, mid);
+            font-size: map-get($font-size, mid-plus);
             font-weight: normal;
             position: relative;
+            margin-top: 0;
+            margin-bottom: 25px;
             &::after {
-                height: 2px;
-                width: 10px;
-                background-color: $clr-tertiary;
-                position: absolute;
-                bottom: -2;         
+                @include partial-underline;       
             }
         }
     }
     .submit {
         display: flex;
         justify-content: center;
+        margin-top: $menu-submit-mrg;
+        margin-bottom: $menu-sect-btm + $menu-submit-mrg;
     }
 }

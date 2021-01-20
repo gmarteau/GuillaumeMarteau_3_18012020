@@ -21,6 +21,7 @@
         }
         &__price {
             @include no-block-margin;
+            font-weight: bold;
         }
     }
 }

@@ -1,0 +1,82 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../base/base";
+@import "../base/typography";
+
+.zone {
+    width: 100%;
+    height: $where-height;
+    @include bg-lighten($clr-tertiary, 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__name {
+        margin-left: 1rem;
+    }
+}
+
+.intro {
+    width: 100%;
+    height: 300px;
+    @include bg-lighten($clr-tertiary, 20%);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    &__title {
+        font-size: map-get($font-size, big);
+        font-weight: bold;
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        font-size: map-get($font-size, mid-plus);
+        font-weight: normal;
+        margin-bottom: 7%;
+    }
+}
+
+.explain {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &__title {
+        font-size: map-get($font-size, big);
+        font-weight: bold;
+        padding-top: 30px;
+        margin-bottom: 0;
+    }
+    &__list {
+        height: 75%;
+        padding-left: 0;
+        list-style-type: decimal;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &__item {
+            @include box-style(item);
+            @include bg-lighten($clr-tertiary, 20%);
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            .icon {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.restau-sect {
+    height: auto;
+    @include bg-lighten($clr-tertiary, 20%);
+    &__content {
+        height: auto;
+        .card-container {
+            height: auto;
+            width: 100%;
+        }
+    }
+}

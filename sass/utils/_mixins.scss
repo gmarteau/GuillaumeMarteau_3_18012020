@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./maps";
+
+@mixin logo-typo {
+    font-family: 'shrikhandregular', sans-serif;
+    font-weight: normal;
+    font-size: map-get($font-size, big);
+}
+
+@mixin header-shadow {
+    box-shadow: 0px 2px 5px $clr-hdr-shad;
+}
+
+@mixin bg-lighten($clr, $amount) {
+    background-color: lighten($clr, $amount);
+}
+
+@mixin box-style($box: other) {
+    @if ($box == "btn") {
+        width: $btn-width;
+        height: $btn-height;
+        border-radius: $btn-radius;
+        background-color: $clr-primary;
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @else if ($box == "card") {
+        border-radius: $item-radius;
+    }
+    @else {
+        border-radius: $item-radius;
+        width: $item-width;
+        height: $item-height;
+    }
+    box-shadow: 0px 3px 7px $clr-tertiary;
+}
+
+@mixin section-width {
+    width: $section-width;
+    margin: auto;
+}
+
+@mixin img-fill-space {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin menu-hdr-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin menu-hdr-icon {
+    font-size: map-get($font-size, big);
+    padding-right: $menu-icn-pdg;
+}
+
+@mixin bg-img($page) {
+    $path: map-get($img-path, $page);
+    background: url($path);
+    background-size: contain;
+    background-position: top;
+}
+
+@mixin list-item-justify {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+@mixin no-block-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

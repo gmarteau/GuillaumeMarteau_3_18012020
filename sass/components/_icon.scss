@@ -1,0 +1,21 @@
+@import "../utils/variables";
+
+.icon {
+    color: #000000;
+    font-size: $icon-size;
+    &.icon--fade {
+        color: gray;
+    }
+    &.icon--primary {
+        color: $clr-primary;
+    }
+    &.icon--bright {
+        color: #fff;
+    }
+    &.icon--small {
+        font-size: $icon-size * .7;
+    }
+    &.icon--smaller {
+        font-size: $icon-size * .5;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.page {
+    height: auto;
+    &__pic {
+        width: 100%;
+        height: 300px;
+        margin-bottom: -50px;
+        &__img {
+            @include img-fill-space;
+        }
+    }
+}

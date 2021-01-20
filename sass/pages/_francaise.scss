@@ -1,0 +1,9 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../base/base";
+@import "../base/typography";
+
+.page {
+    @include bg-img(francaise);
+}

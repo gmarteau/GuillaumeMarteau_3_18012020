@@ -1,0 +1,26 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+    &__item {
+        @include box-style;
+        @include list-item-justify;
+        margin-bottom: 20px;
+        &__txt {
+            @include no-block-margin;
+            @include txt-overflow;
+            max-width: 80%;
+            em {
+                font-weight: bold;
+                font-style: normal;
+                font-size: map-get($font-size, mid-plus);
+            }
+        }
+        &__price {
+            @include no-block-margin;
+        }
+    }
+}

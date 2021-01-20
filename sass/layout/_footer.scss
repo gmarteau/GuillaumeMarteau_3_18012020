@@ -1,0 +1,37 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.footer {
+    background-color: $clr-ftr;
+    height: auto;
+    padding-top: $ftr-pdg;
+    padding-bottom: $ftr-pdg;
+    font-size: map-get($font-size, mid);
+    .logo {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: map-get($font-size, mid-plus);
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        &__item {
+            margin-bottom: 5px;
+            em {
+                font-weight: bold;
+                font-style: normal;
+            }
+            .icon {
+                margin-right: 10px;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}

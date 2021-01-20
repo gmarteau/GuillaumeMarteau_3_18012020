@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    margin: 0;
+}
+
+.ctrd-section {
+    @include section-width;
+}

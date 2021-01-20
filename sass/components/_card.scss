@@ -1,0 +1,45 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/maps";
+
+.card {
+    width: $card-width;
+    height: $card-height;
+    text-decoration: none;
+    @include box-style(card);
+    border: 2px black solid;
+    position: relative;
+    &__pic {
+        width: $card-width;
+        height: $card-pic-height;
+        &__img {
+            @include img-fill-space;
+        }
+    }
+    &__new {
+        width: 25%;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: map-get($font-size, mid);
+        font-style: normal;
+        font-weight: bold;
+        color: $clr-secondary;
+        background: $clr-tertiary;
+    }
+    &__banner {
+        width: $card-width;
+        height: $card-height - $card-pic-height;
+        font-size: map-get($font-size, mid-plus);
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        &__txt {
+            margin: 0;
+            strong {
+                font-weight: bold;
+            }
+        }
+    }
+}

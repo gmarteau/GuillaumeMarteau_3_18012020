@@ -34,3 +34,8 @@ $menu-sect-btm: 50px;
 $menu-submit-mrg: $menu-sect-btm / 3;
 
 $ftr-pdg: 30px;
+
+$transition-short: 200ms;
+$transition-fast: 100ms;
+$btn-hvr-lighten: 10%;
+$bez-slow-end: cubic-bezier(.03,.73,0,.99);

@@ -15,17 +15,30 @@
     background-color: lighten($clr, $amount);
 }
 
+@mixin btn-bg($state: "inactive") {
+    @if ($state == "hover") {
+        $clr-pr: lighten($clr-primary, $btn-hvr-lighten);
+        $clr-sec: lighten($clr-secondary, $btn-hvr-lighten);
+        background: radial-gradient(ellipse at top left, $clr-sec, $clr-pr);
+    }
+    @else {
+        background: radial-gradient(ellipse at top left, $clr-secondary, $clr-primary);
+    }
+}
+
 @mixin box-style($box: other) {
     @if ($box == "btn") {
         width: $btn-width;
         height: $btn-height;
         border-radius: $btn-radius;
-        background-color: $clr-primary;
+        @include btn-bg();
         color: #ffffff;
         text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: 1;
     }
     @else if ($box == "card") {
         border-radius: $item-radius;
@@ -81,7 +94,7 @@
     border-radius: 50%;
     background: $clr-primary;
     color: #fff;
-    font-size: map-get($font-size, mid);
+    font-size: map-get($font-size, small);
     font-weight: normal;
     display: flex;
     justify-content: center;
@@ -96,9 +109,9 @@
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 0;
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 0;
 }
 
 @mixin no-block-margin {
@@ -120,4 +133,12 @@
     position: absolute;
     bottom: -9;
     left: 0;  
+}
+
+@mixin pseudo-pos {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

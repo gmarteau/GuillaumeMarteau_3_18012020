@@ -9,10 +9,14 @@
         @include box-style;
         @include list-item-justify;
         margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
         &__txt {
             @include no-block-margin;
             @include txt-overflow;
             max-width: 80%;
+            flex: 5;
+            padding-bottom: 12px;
             em {
                 font-weight: bold;
                 font-style: normal;
@@ -22,6 +26,31 @@
         &__price {
             @include no-block-margin;
             font-weight: bold;
+            margin-left: 20px;
+            padding-bottom: 12px;
+            flex: 1;
+        }
+        &__select {
+            flex: 2;
+            height: $item-height;
+            background-color: $clr-tertiary;
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transform-origin: right;
+            transition: transform $transition-short $bez-slow-end;
+        }
+        &:hover {
+            > .list__item__select {
+                transform: translateX(0);
+            }
+        }
+        &:active {
+            > .list__item__select {
+                transform: translateX(0);
+            }
         }
     }
 }

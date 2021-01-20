@@ -18,4 +18,25 @@
     &.icon--smaller {
         font-size: $icon-size * .5;
     }
+    &.icon--tofill {
+        position: relative;
+        &:hover {
+            > .icon--filled {
+                transform: scale(1);
+            }
+        }
+        &:active {
+            > .icon--filled {
+                transform: scale(1);
+            }
+        }
+    }
+    &.icon--filled {
+        @include pseudo-pos;
+        color: $clr-primary;
+        transform-origin: 30% bottom;
+        transform: scale(0);
+        transition: transform $transition-fast ease-out;
+    }
+
 }

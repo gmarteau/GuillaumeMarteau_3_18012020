@@ -18,6 +18,9 @@
     &.icon--smaller {
         font-size: $icon-size * .5;
     }
+    &.icon--big {
+        font-size: $icon-size * 1.2;
+    }
     &.icon--tofill {
         position: relative;
         &:hover {
@@ -33,10 +36,9 @@
     }
     &.icon--filled {
         @include pseudo-pos;
-        color: $clr-primary;
+        color: $clr-secondary;
         transform-origin: 30% bottom;
         transform: scale(0);
-        transition: transform $transition-fast ease-out;
+        transition: transform $transition-fast ease-in;
     }
-
 }

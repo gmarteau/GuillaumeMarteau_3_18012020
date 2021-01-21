@@ -142,3 +142,18 @@
     left: 0;
     right: 0;
 }
+
+@mixin animation-items($value: 0) {
+    animation: anim-itm $anim-itm-time ease-in both;
+}
+
+@mixin load-pt {
+    width: $load-pt-size;
+    height: $load-pt-size;
+    border-radius: 50%;
+    margin-left: $load-pt-mrg;
+    margin-right: $load-pt-mrg;
+    margin-top: 50vh - $load-pt-size;
+    font-size: map-get($font-size, load);
+    animation: loading-point $load-pt-dur backwards infinite normal;
+}

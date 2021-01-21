@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/maps";
+@import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
@@ -7,6 +8,7 @@
 @import "./components/icon";
 @import "./components/btn";
 @import "./components/card";
+@import "./layout/loader";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/page";

@@ -39,3 +39,17 @@ $transition-short: 200ms;
 $transition-fast: 100ms;
 $btn-hvr-lighten: 10%;
 $bez-slow-end: cubic-bezier(.03,.73,0,.99);
+$bez-slow-start: cubic-bezier(1,.02,1,.41);
+
+$anim-itm-time: 1000ms;
+$num-items: 5;
+$anim-itm-del: 100ms;
+
+$load-pt-size: 5vh;
+$load-pt-mrg: 1vh;
+$load-dur: 3000ms;
+$load-pt-dur: 800ms;
+$num-pt: 3;
+$load-pt-del: $load-pt-dur / $num-pt;
+$bez-bounce-up: cubic-bezier(.28,.72,.51,1);
+$bez-bounce-down: cubic-bezier(.51,1,.28,.72);

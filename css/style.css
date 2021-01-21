@@ -1,3 +1,35 @@
+@keyframes anim-itm {
+  0% {
+    opacity: 0;
+  }
+  0%, 25% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(50%);
+    opacity: 0.2;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loading-point {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  45%, 55% {
+    transform: translateY(-100%);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes loader-show {
+  0%, 100% {
+    transform: translateX(0);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -65,6 +97,9 @@ body {
 .icon.icon--smaller {
   font-size: 0.6rem;
 }
+.icon.icon--big {
+  font-size: 1.44rem;
+}
 .icon.icon--tofill {
   position: relative;
 }
@@ -80,10 +115,10 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  color: #9356DC;
+  color: #FF79DA;
   transform-origin: 30% bottom;
   transform: scale(0);
-  transition: transform 100ms ease-out;
+  transition: transform 100ms ease-in;
 }
 
 .btn {
@@ -164,6 +199,47 @@ body {
 }
 .card__banner__txt strong {
   font-weight: bold;
+}
+
+body {
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateX(-100%);
+  animation: loader-show 3000ms backwards;
+}
+.loader__point {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  margin-top: 45vh;
+  font-size: 2rem;
+  animation: loading-point 800ms backwards infinite normal;
+}
+.loader__point--1 {
+  animation-delay: 266.6666666667ms;
+  color: #9356DC;
+}
+.loader__point--2 {
+  animation-delay: 533.3333333333ms;
+  color: #FF79DA;
+}
+.loader__point--3 {
+  animation-delay: 800ms;
+  color: #99E2D0;
 }
 
 header {
@@ -298,6 +374,22 @@ header .icon {
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
+  animation: anim-itm 1000ms ease-in both;
+}
+.list__item--1 {
+  animation-delay: 100ms;
+}
+.list__item--2 {
+  animation-delay: 200ms;
+}
+.list__item--3 {
+  animation-delay: 300ms;
+}
+.list__item--4 {
+  animation-delay: 400ms;
+}
+.list__item--5 {
+  animation-delay: 500ms;
 }
 .list__item__txt {
   margin-top: 0;
@@ -321,6 +413,9 @@ header .icon {
   margin-left: 20px;
   padding-bottom: 12px;
   flex: 1;
+  transform: translateX(200%);
+  transform-origin: right;
+  transition: transform 200ms cubic-bezier(0.03, 0.73, 0, 0.99);
 }
 .list__item__select {
   flex: 2;
@@ -334,11 +429,27 @@ header .icon {
   transform-origin: right;
   transition: transform 200ms cubic-bezier(0.03, 0.73, 0, 0.99);
 }
+.list__item__select > .icon {
+  transform: rotate(0);
+  transition: transform 170ms 30ms ease-in-out;
+}
+.list__item:hover > .list__item__price {
+  transform: translateX(0);
+}
 .list__item:hover > .list__item__select {
+  transform: translateX(0);
+}
+.list__item:hover > .list__item__select > .icon {
+  transform: rotate(360deg);
+}
+.list__item:active > .list__item__price {
   transform: translateX(0);
 }
 .list__item:active > .list__item__select {
   transform: translateX(0);
+}
+.list__item:active > .list__item__select > .icon {
+  transform: rotate(360deg);
 }
 
 * {

@@ -1,0 +1,81 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+    &__item {
+        @include box-style;
+        @include list-item-justify;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        @include animation-items;
+        @for $i from 1 through $num-items {
+            &--#{$i} {
+                animation-delay: $anim-itm-del * $i;
+             }
+        }
+        &__txt {
+            @include no-block-margin;
+            @include txt-overflow;
+            max-width: 80%;
+            flex: 5;
+            padding-bottom: 12px;
+            em {
+                font-weight: bold;
+                font-style: normal;
+                font-size: map-get($font-size, mid-plus);
+            }
+        }
+        &__price {
+            @include no-block-margin;
+            font-weight: bold;
+            margin-left: 20px;
+            padding-bottom: 12px;
+            flex: 1;
+            transform: translateX(200%);
+            transform-origin: right;
+            transition: transform $transition-short $bez-slow-end;
+        }
+        &__select {
+            flex: 2;
+            height: $item-height;
+            background-color: $clr-tertiary;
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transform-origin: right;
+            transition: transform $transition-short $bez-slow-end;
+            > .icon {
+                transform: rotate(0);
+                transition: transform 170ms 30ms ease-in-out;
+            }
+        }
+        &:hover {
+            > .list__item__price {
+                transform: translateX(0);
+            }
+            > .list__item__select {
+                transform: translateX(0);
+                > .icon {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &:active {
+            > .list__item__price {
+                transform: translateX(0);
+            }
+            > .list__item__select {
+                transform: translateX(0);
+                > .icon {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

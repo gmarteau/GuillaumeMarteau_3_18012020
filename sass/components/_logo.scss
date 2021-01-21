@@ -1,0 +1,10 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.logo {
+    color: #000;
+    &.logo--ftr {
+        color: #fff;
+    }
+}

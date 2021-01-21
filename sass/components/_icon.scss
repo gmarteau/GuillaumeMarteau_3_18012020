@@ -1,0 +1,44 @@
+@import "../utils/variables";
+
+.icon {
+    color: #000000;
+    font-size: $icon-size;
+    &.icon--fade {
+        color: gray;
+    }
+    &.icon--primary {
+        color: $clr-primary;
+    }
+    &.icon--bright {
+        color: #fff;
+    }
+    &.icon--small {
+        font-size: $icon-size * .7;
+    }
+    &.icon--smaller {
+        font-size: $icon-size * .5;
+    }
+    &.icon--big {
+        font-size: $icon-size * 1.2;
+    }
+    &.icon--tofill {
+        position: relative;
+        &:hover {
+            > .icon--filled {
+                transform: scale(1);
+            }
+        }
+        &:active {
+            > .icon--filled {
+                transform: scale(1);
+            }
+        }
+    }
+    &.icon--filled {
+        @include pseudo-pos;
+        color: $clr-secondary;
+        transform-origin: 30% bottom;
+        transform: scale(0);
+        transition: transform $transition-fast ease-in;
+    }
+}

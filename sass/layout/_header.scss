@@ -1,0 +1,18 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+header {
+    width: 100%;
+    height: $hdr-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include header-shadow;
+    position: relative;
+    .icon {
+        position: absolute;
+        top: $icon-rtn-pos;
+        left: $icon-rtn-pos;
+    }
+}

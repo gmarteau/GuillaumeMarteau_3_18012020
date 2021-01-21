@@ -1,0 +1,40 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+.menu {
+    border-top-left-radius: $menu-radius;
+    border-top-right-radius: $menu-radius;
+    padding-top: $menu-pdg-top;
+    position: relative;
+    background: white;
+    &__header {
+        @include menu-hdr-flex;
+        margin-bottom: 20px;
+        &__name {
+            @include logo-typo;
+        }
+        .icon {
+            @include menu-hdr-icon;
+        }
+    }
+    &__section {
+        margin-bottom: $menu-sect-btm;
+        &__title {
+            font-size: map-get($font-size, mid-plus);
+            font-weight: normal;
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 25px;
+            &::after {
+                @include partial-underline;       
+            }
+        }
+    }
+    .submit {
+        display: flex;
+        justify-content: center;
+        margin-top: $menu-submit-mrg;
+        margin-bottom: $menu-sect-btm + $menu-submit-mrg;
+    }
+}

@@ -1,0 +1,153 @@
+@import "./variables";
+@import "./maps";
+
+@mixin logo-typo {
+    font-family: 'shrikhandregular', sans-serif;
+    font-weight: normal;
+    font-size: map-get($font-size, big);
+}
+
+@mixin header-shadow {
+    box-shadow: 0px 1px 5px $clr-hdr-shad;
+}
+
+@mixin bg-lighten($clr, $amount) {
+    background-color: lighten($clr, $amount);
+}
+
+@mixin btn-bg($state: "inactive") {
+    @if ($state == "hover") {
+        $clr-pr: lighten($clr-primary, $btn-hvr-lighten);
+        $clr-sec: lighten($clr-secondary, $btn-hvr-lighten);
+        background: radial-gradient(ellipse at top left, $clr-sec, $clr-pr);
+    }
+    @else {
+        background: radial-gradient(ellipse at top left, $clr-secondary, $clr-primary);
+    }
+}
+
+@mixin box-style($box: other) {
+    @if ($box == "btn") {
+        width: $btn-width;
+        height: $btn-height;
+        border-radius: $btn-radius;
+        @include btn-bg();
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    @else if ($box == "card") {
+        border-radius: $item-radius;
+        overflow: hidden;
+    }
+    @else if ($box == "explain") {
+        width: 98%;
+        height: $item-height;
+        border-radius: $item-radius;
+    }
+    @else {
+        border-radius: $item-radius;
+        width: $item-width;
+        height: $item-height;
+    }
+    box-shadow: 0px 3px 7px $clr-tertiary;
+}
+
+@mixin section-width {
+    width: $section-width;
+    margin: auto;
+}
+
+@mixin img-fill-space {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin menu-hdr-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin menu-hdr-icon {
+    font-size: map-get($font-size, big);
+    padding-right: $menu-icn-pdg;
+}
+
+@mixin ol-style {
+    counter-increment: explain;
+    content: counter(explain);
+    width: $ol-nbr-size;
+    height: $ol-nbr-size;
+    border-radius: 50%;
+    background: $clr-primary;
+    color: #fff;
+    font-size: map-get($font-size, small);
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -($ol-nbr-size/2);
+}
+
+@mixin list-item-justify {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 12px;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+@mixin no-block-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin partial-underline {
+    content:"";
+    height: 3px;
+    width: 45px;
+    background-color: $clr-tertiary;
+    position: absolute;
+    bottom: -9;
+    left: 0;  
+}
+
+@mixin pseudo-pos {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin animation-items($value: 0) {
+    animation: anim-itm $anim-itm-time ease-in both;
+}
+
+@mixin load-pt {
+    width: $load-pt-size;
+    height: $load-pt-size;
+    border-radius: 50%;
+    margin-left: $load-pt-mrg;
+    margin-right: $load-pt-mrg;
+    margin-top: 50vh - $load-pt-size;
+    font-size: map-get($font-size, load);
+    animation: loading-point $load-pt-dur backwards infinite normal;
+}

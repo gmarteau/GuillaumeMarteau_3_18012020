@@ -1,0 +1,59 @@
+$clr-primary: #9356DC;
+$clr-secondary: #FF79DA;
+$clr-tertiary: #99E2D0;
+$clr-hdr-shad: #7a7a7a;
+$clr-ftr: #303030;
+
+$hdr-height: 70px;
+$where-height: 50px;
+
+$icon-rtn-pos: 25;
+$icon-size: 1.2rem;
+
+$btn-height: 50px;
+$btn-width: 60%;
+$btn-radius: 10rem;
+
+$ol-nbr-size: 25px;
+
+$item-height: 70px;
+$item-width: 100%;
+$item-radius: 1rem;
+$item-margin-bt: 10px;
+
+$section-width: 90%;
+
+$card-width: 100%;
+$card-height: 280px;
+$card-mrg-btm: 30px;
+$card-pic-height: $card-height*.7;
+$card-icon-pos: 30;
+$card-new-pos: 15;
+
+$menu-radius: 3rem;
+$menu-pdg-top: 30px;
+$menu-icn-pdg: 15px;
+$menu-sect-btm: 50px;
+$menu-submit-mrg: $menu-sect-btm / 3;
+
+$ftr-pdg: 30px;
+$ftr-mrg-top: 60px;
+
+$transition-short: 200ms;
+$transition-fast: 100ms;
+$btn-hvr-lighten: 10%;
+$bez-slow-end: cubic-bezier(.03,.73,0,.99);
+$bez-slow-start: cubic-bezier(1,.02,1,.41);
+
+$anim-itm-time: 1000ms;
+$num-items: 5;
+$anim-itm-del: 100ms;
+
+$load-pt-size: 5vh;
+$load-pt-mrg: 1vh;
+$load-dur: 3000ms;
+$load-pt-dur: 800ms;
+$num-pt: 3;
+$load-pt-del: $load-pt-dur / $num-pt;
+$bez-bounce-up: cubic-bezier(.28,.72,.51,1);
+$bez-bounce-down: cubic-bezier(.51,1,.28,.72);

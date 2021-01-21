@@ -1,0 +1,41 @@
+@import "../utils/variables";
+@import "../utils/maps";
+@import "../utils/mixins";
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../fonts/shrikhand-regular-webfont.eot');
+    src: url('../fonts/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shrikhand-regular-webfont.woff') format('woff'),
+         url('../fonts/shrikhand-regular-webfont.ttf') format('truetype'),
+         url('../fonts/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    &:not(.logo) {
+        font-family: 'robotoregular', sans-serif;
+    }
+    &:not(.menu__header__name) {
+        font-family: 'robotoregular', sans-serif;
+    }
+}
+
+.logo, .menu__header__name {
+    @include logo-typo;
+}

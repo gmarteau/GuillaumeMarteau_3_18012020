@@ -1,0 +1,27 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.btn {
+    @include box-style(btn);
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &:active {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content:"";
+        @include btn-bg(hover);
+        @include pseudo-pos;
+        z-index: -1;
+        border-radius: $btn-radius;
+        box-shadow: 0px 5px 2px $clr-tertiary;
+        opacity: 0;
+        transition: opacity $transition-short ease-in-out;
+    }
+}

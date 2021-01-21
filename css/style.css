@@ -159,11 +159,14 @@ body {
 .card {
   width: 100%;
   height: 280px;
-  text-decoration: none;
+  margin-bottom: 30px;
   border-radius: 1rem;
+  overflow: hidden;
   box-shadow: 0px 3px 7px #99E2D0;
-  border: 2px black solid;
   position: relative;
+}
+.card > a {
+  text-decoration: none;
 }
 .card__pic {
   width: 100%;
@@ -175,11 +178,15 @@ body {
   object-fit: cover;
 }
 .card__new {
-  width: 25%;
+  width: auto;
   height: 20px;
   position: absolute;
-  top: 0;
-  left: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15;
+  right: 15;
   font-size: 1rem;
   font-style: normal;
   font-weight: bold;
@@ -192,13 +199,20 @@ body {
   font-size: 1.1rem;
   color: black;
   display: flex;
-  justify-content: space-between;
-}
-.card__banner__txt {
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 1rem;
   margin: 0;
+  line-height: 1rem;
 }
-.card__banner__txt strong {
+.card__banner strong {
   font-weight: bold;
+}
+.card > .icon {
+  position: absolute;
+  bottom: 30;
+  right: 20;
+  z-index: 10;
 }
 
 body {

@@ -5,10 +5,12 @@
 .card {
     width: $card-width;
     height: $card-height;
-    text-decoration: none;
+    margin-bottom: $card-mrg-btm;
     @include box-style(card);
-    border: 2px black solid;
     position: relative;
+    > a {
+        text-decoration: none;
+    }
     &__pic {
         width: $card-width;
         height: $card-pic-height;
@@ -17,11 +19,15 @@
         }
     }
     &__new {
-        width: 25%;
+        width: auto;
         height: 20px;
         position: absolute;
-        top: 0;
-        left: 0;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: $card-new-pos;
+        right: $card-new-pos;
         font-size: map-get($font-size, mid);
         font-style: normal;
         font-weight: bold;
@@ -34,12 +40,19 @@
         font-size: map-get($font-size, mid-plus);
         color: black;
         display: flex;
-        justify-content: space-between;
-        &__txt {
-            margin: 0;
-            strong {
-                font-weight: bold;
-            }
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0;
+        line-height: 1rem;
+        strong {
+            font-weight: bold;
         }
+    }
+    > .icon {
+        position: absolute;
+        bottom: $card-icon-pos;
+        right: $card-icon-pos / 1.5;
+        z-index: 10;
     }
 }

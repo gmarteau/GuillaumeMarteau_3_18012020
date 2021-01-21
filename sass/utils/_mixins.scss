@@ -42,6 +42,7 @@
     }
     @else if ($box == "card") {
         border-radius: $item-radius;
+        overflow: hidden;
     }
     @else if ($box == "explain") {
         width: 98%;
@@ -77,13 +78,6 @@
 @mixin menu-hdr-icon {
     font-size: map-get($font-size, big);
     padding-right: $menu-icn-pdg;
-}
-
-@mixin bg-img($page) {
-    $path: map-get($img-path, $page);
-    background: url($path);
-    background-size: contain;
-    background-position: top;
 }
 
 @mixin ol-style {

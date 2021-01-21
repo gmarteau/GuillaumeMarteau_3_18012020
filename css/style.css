@@ -274,6 +274,7 @@ header .icon {
 .footer {
   background-color: #303030;
   height: auto;
+  margin-top: 60px;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 1rem;

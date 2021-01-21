@@ -5,6 +5,7 @@
 .footer {
     background-color: $clr-ftr;
     height: auto;
+    margin-top: $ftr-mrg-top;
     padding-top: $ftr-pdg;
     padding-bottom: $ftr-pdg;
     font-size: map-get($font-size, mid);

@@ -57,3 +57,8 @@ $num-pt: 3;
 $load-pt-del: $load-pt-dur / $num-pt;
 $bez-bounce-up: cubic-bezier(.28,.72,.51,1);
 $bez-bounce-down: cubic-bezier(.51,1,.28,.72);
+
+$dsktp-font-multiplier: 1.2;
+
+$tblt-card-height: $card-height *.8;
+$tblt-card-pic-height: $tblt-card-height *.7;

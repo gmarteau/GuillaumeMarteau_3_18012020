@@ -6,3 +6,9 @@ $font-size: (
     big: 1.7rem,
     load: 2rem
 );
+
+$breakpoints: (
+    tablet-min: 600px,
+    tablet-max: 1024px,
+    desktop: 1025px
+);

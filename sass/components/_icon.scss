@@ -3,6 +3,7 @@
 .icon {
     color: #000000;
     font-size: $icon-size;
+
     &.icon--fade {
         color: gray;
     }
@@ -20,17 +21,24 @@
     }
     &.icon--big {
         font-size: $icon-size * 1.2;
+        @include desktop-only {
+            font-size: ($icon-size*1.2) * $dsktp-font-multiplier;
+        }
     }
     &.icon--tofill {
         position: relative;
         &:hover {
+            cursor: pointer;
             > .icon--filled {
                 transform: scale(1);
+                cursor: pointer;
             }
         }
         &:active {
+            cursor: pointer;
             > .icon--filled {
                 transform: scale(1);
+                cursor: pointer;
             }
         }
     }
@@ -40,5 +48,8 @@
         transform-origin: 30% bottom;
         transform: scale(0);
         transition: transform $transition-fast ease-in;
+        @include desktop-only {
+            transform-origin: 40% bottom;
+        }
     }
 }

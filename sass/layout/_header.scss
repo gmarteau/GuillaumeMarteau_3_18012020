@@ -10,9 +10,15 @@ header {
     align-items: center;
     @include header-shadow;
     position: relative;
+    @include desktop-only {
+        height: $hdr-height * $dsktp-font-multiplier;
+    }
     .icon {
         position: absolute;
         top: $icon-rtn-pos;
         left: $icon-rtn-pos;
+        @include desktop-only {
+            font-size: map-get($font-size, big-min);
+        }
     }
 }

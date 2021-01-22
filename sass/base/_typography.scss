@@ -38,4 +38,7 @@
 
 .logo, .menu__header__name {
     @include logo-typo;
+    @include desktop-only {
+        font-size: map-get($font-size, big) * $dsktp-font-multiplier;
+    }
 }

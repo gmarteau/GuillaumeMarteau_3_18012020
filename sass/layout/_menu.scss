@@ -15,6 +15,9 @@
             justify-content: center;
             margin-bottom: 50px;
         }
+        @include tablet-only {
+            margin-bottom: 30px;
+        }
         &__name {
             @include logo-typo;
             @include desktop-only {
@@ -56,6 +59,11 @@
         @include desktop-only {
             width: 60%;
             margin: auto;
+        }
+        @include tablet-only {
+            width: 40%;
+            margin: auto;
+            margin-bottom: 70px;
         }
     }
 }

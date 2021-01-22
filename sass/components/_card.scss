@@ -12,6 +12,10 @@
         width: $card-width / 4.1;
         margin-bottom: $card-mrg-btm * 5;
     }
+    @include tablet-only {
+        width: $card-width / 2.1;
+        height: $tblt-card-height;
+    }
     > a {
         text-decoration: none;
     }
@@ -20,6 +24,9 @@
         height: $card-pic-height;
         &__img {
             @include img-fill-space;
+        }
+        @include tablet-only {
+            height: $tblt-card-pic-height;
         }
     }
     &__new {
@@ -55,11 +62,20 @@
         @include desktop-only {
             font-size: map-get($font-size, mid-plus) * $dsktp-font-multiplier;
         }
+        @include tablet-only {
+            line-height: .8;
+            padding: 0;
+            padding-left: 1rem;
+            padding-bottom: 1.2rem;
+        }
     }
     > .icon {
         position: absolute;
         bottom: $card-icon-pos;
         right: $card-icon-pos / 1.5;
         z-index: 10;
+        @include tablet-only {
+            bottom: 23;
+        }
     }
 }

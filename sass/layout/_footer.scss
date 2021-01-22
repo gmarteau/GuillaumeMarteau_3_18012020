@@ -15,6 +15,10 @@
         padding-top: $ftr-pdg * $dsktp-font-multiplier;
         padding-bottom: $ftr-pdg * $dsktp-font-multiplier;    
     }
+    @include tablet-only {
+        margin-top: 0;
+        text-align: center;
+    }
     .logo {
         margin-top: 0;
         margin-bottom: 20px;
@@ -22,6 +26,9 @@
         @include desktop-only {
             font-size: map-get($font-size, big);
             margin-bottom: 30px;
+        }
+        @include tablet-only {
+            font-size: map-get($font-size, big-min);
         }
     }
     &__list {
@@ -44,6 +51,9 @@
                 margin-right: 10px;
                 @include desktop-only {
                     font-size: $icon-size;
+                }
+                @include tablet-only {
+                    font-size: $icon-size * .75;
                 }
             }
             a {

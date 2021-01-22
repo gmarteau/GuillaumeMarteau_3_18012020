@@ -11,6 +11,9 @@
         @include desktop-only {
             height: 600px;
         }
+        @include tablet-only {
+            height: 400px;
+        }
         &__img {
             @include img-fill-space;
         }

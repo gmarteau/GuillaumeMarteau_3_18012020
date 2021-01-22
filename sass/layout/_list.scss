@@ -11,6 +11,13 @@
         flex-flow: row wrap;
         justify-content: center;
     }
+    @include tablet-only {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: space-between;
+    }
     &__item {
         @include box-style;
         @include list-item-justify;
@@ -28,6 +35,10 @@
             height: $item-height * 1.5;
             margin-right: 2.5%;
             padding-left: 20px;
+        }
+        @include tablet-only {
+            width: $item-width / 2.1;
+            margin-right: 2.2%;
         }
         &__txt {
             @include no-block-margin;

@@ -75,7 +75,7 @@
         right: $card-icon-pos / 1.5;
         z-index: 10;
         @include tablet-only {
-            bottom: 23;
+            bottom: 23px;
         }
     }
 }

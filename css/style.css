@@ -238,8 +238,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 15;
-  right: 15;
+  top: 15px;
+  right: 15px;
   font-size: 1rem;
   font-style: normal;
   font-weight: bold;
@@ -276,13 +276,13 @@ body {
 }
 .card > .icon {
   position: absolute;
-  bottom: 30;
-  right: 20;
+  bottom: 30px;
+  right: 20px;
   z-index: 10;
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .card > .icon {
-    bottom: 23;
+    bottom: 23px;
   }
 }
 
@@ -343,8 +343,8 @@ header {
 }
 header .icon {
   position: absolute;
-  top: 25;
-  left: 25;
+  top: 25px;
+  left: 25px;
 }
 @media screen and (min-width: 1025px) {
   header .icon {
@@ -355,7 +355,6 @@ header .icon {
 .footer {
   background-color: #303030;
   height: auto;
-  margin-top: 60px;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 1rem;
@@ -521,7 +520,7 @@ header .icon {
   width: 45px;
   background-color: #99E2D0;
   position: absolute;
-  bottom: -9;
+  bottom: -9px;
   left: 0;
 }
 .menu .submit {
@@ -977,10 +976,11 @@ body {
 .restau-sect {
   height: auto;
   background-color: #e8f9f5;
+  padding-bottom: 40px;
 }
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .restau-sect {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 }
 .restau-sect__title {

@@ -171,8 +171,9 @@
 .restau-sect {
     height: auto;
     @include bg-lighten($clr-tertiary, 20%);
-    @include tablet-only {
-        padding-bottom: 40px;
+    padding-bottom: 40px;
+    @include desktop-only {
+        padding-bottom: 0;
     }
     &__title {
         @include no-block-margin;

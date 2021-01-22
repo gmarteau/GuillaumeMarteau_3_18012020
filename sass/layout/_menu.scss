@@ -11,8 +11,15 @@
     &__header {
         @include menu-hdr-flex;
         margin-bottom: 20px;
+        @include desktop-only {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
         &__name {
             @include logo-typo;
+            @include desktop-only {
+                margin-right: 2.5%;
+            }
         }
         .icon {
             @include menu-hdr-icon;
@@ -20,14 +27,24 @@
     }
     &__section {
         margin-bottom: $menu-sect-btm;
+        @include desktop-only {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &__title {
             font-size: map-get($font-size, mid-plus);
             font-weight: normal;
             position: relative;
             margin-top: 0;
             margin-bottom: 25px;
+            @include desktop-only {
+                font-size: map-get($font-size, mid-plus) * $dsktp-font-multiplier;
+                width: min-content;
+                margin-bottom: 40px;
+            }
             &::after {
-                @include partial-underline;       
+                @include partial-underline;
             }
         }
     }
@@ -36,5 +53,9 @@
         justify-content: center;
         margin-top: $menu-submit-mrg;
         margin-bottom: $menu-sect-btm + $menu-submit-mrg;
+        @include desktop-only {
+            width: 60%;
+            margin: auto;
+        }
     }
 }

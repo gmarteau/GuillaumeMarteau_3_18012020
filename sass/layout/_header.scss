@@ -17,5 +17,8 @@ header {
         position: absolute;
         top: $icon-rtn-pos;
         left: $icon-rtn-pos;
+        @include desktop-only {
+            font-size: map-get($font-size, big-min);
+        }
     }
 }

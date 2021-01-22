@@ -8,6 +8,10 @@
     margin-bottom: $card-mrg-btm;
     @include box-style(card);
     position: relative;
+    @include desktop-only {
+        width: $card-width / 4.1;
+        margin-bottom: $card-mrg-btm * 5;
+    }
     > a {
         text-decoration: none;
     }
@@ -47,6 +51,9 @@
         line-height: 1rem;
         strong {
             font-weight: bold;
+        }
+        @include desktop-only {
+            font-size: map-get($font-size, mid-plus) * $dsktp-font-multiplier;
         }
     }
     > .icon {

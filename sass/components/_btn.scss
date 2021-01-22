@@ -3,6 +3,12 @@
 
 .btn {
     @include box-style(btn);
+    @include desktop-only {
+        width: $btn-width / 1.8;
+        height: $btn-height * 1.5;
+        font-size: map-get($font-size, mid) * 1.2;
+        margin-bottom: 75px;
+    }
     &:hover {
         &::after {
             opacity: 1;

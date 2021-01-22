@@ -163,3 +163,11 @@
         @content;
     }
 }
+
+@mixin intro-desktop-dim {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 450px;
+}

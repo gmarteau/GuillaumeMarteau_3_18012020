@@ -70,6 +70,11 @@ body {
   font-weight: normal;
   font-size: 1.7rem;
 }
+@media screen and (min-width: 1025px) {
+  .logo, .menu__header__name {
+    font-size: 2.04rem;
+  }
+}
 
 .logo {
   color: #000;
@@ -135,6 +140,14 @@ body {
   z-index: 1;
   box-shadow: 0px 3px 7px #99E2D0;
 }
+@media screen and (min-width: 1025px) {
+  .btn {
+    width: 33.3333333333%;
+    height: 75px;
+    font-size: 1.2rem;
+    margin-bottom: 75px;
+  }
+}
 .btn:hover::after {
   opacity: 1;
 }
@@ -164,6 +177,12 @@ body {
   overflow: hidden;
   box-shadow: 0px 3px 7px #99E2D0;
   position: relative;
+}
+@media screen and (min-width: 1025px) {
+  .card {
+    width: 24.3902439024%;
+    margin-bottom: 150px;
+  }
 }
 .card > a {
   text-decoration: none;
@@ -207,6 +226,11 @@ body {
 }
 .card__banner strong {
   font-weight: bold;
+}
+@media screen and (min-width: 1025px) {
+  .card__banner {
+    font-size: 1.32rem;
+  }
 }
 .card > .icon {
   position: absolute;
@@ -265,6 +289,11 @@ header {
   box-shadow: 0px 1px 5px #7a7a7a;
   position: relative;
 }
+@media screen and (min-width: 1025px) {
+  header {
+    height: 84px;
+  }
+}
 header .icon {
   position: absolute;
   top: 25;
@@ -279,10 +308,24 @@ header .icon {
   padding-bottom: 30px;
   font-size: 1rem;
 }
+@media screen and (min-width: 1025px) {
+  .footer {
+    margin-top: 0;
+    text-align: center;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
 .footer .logo {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.1rem;
+}
+@media screen and (min-width: 1025px) {
+  .footer .logo {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
 }
 .footer__list {
   list-style-type: none;
@@ -294,12 +337,23 @@ header .icon {
 .footer__list__item {
   margin-bottom: 5px;
 }
+@media screen and (min-width: 1025px) {
+  .footer__list__item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+}
 .footer__list__item em {
   font-weight: bold;
   font-style: normal;
 }
 .footer__list__item .icon {
   margin-right: 10px;
+}
+@media screen and (min-width: 1025px) {
+  .footer__list__item .icon {
+    font-size: 1.2rem;
+  }
 }
 .footer__list__item a {
   color: #fff;
@@ -507,6 +561,11 @@ body {
   font-weight: normal;
   font-size: 1.7rem;
 }
+@media screen and (min-width: 1025px) {
+  .logo, .menu__header__name {
+    font-size: 2.04rem;
+  }
+}
 
 .zone {
   width: 100%;
@@ -516,8 +575,32 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1025px) {
+  .zone {
+    display: none;
+  }
+}
 .zone__name {
   margin-left: 1rem;
+}
+.zone.zone--desktop {
+  display: none;
+}
+@media screen and (min-width: 1025px) {
+  .zone.zone--desktop {
+    width: 25%;
+    height: 50px;
+    background-color: #d5f3eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wrap__intro {
+    display: flex;
+  }
 }
 
 .intro {
@@ -529,6 +612,18 @@ body {
   align-items: center;
   text-align: center;
 }
+@media screen and (min-width: 1025px) {
+  .intro {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 450px;
+    width: 60%;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+  }
+}
 .intro__title {
   width: 75%;
   font-size: 1.7rem;
@@ -536,10 +631,22 @@ body {
   margin-top: 10%;
   margin-bottom: 0;
 }
+@media screen and (min-width: 1025px) {
+  .intro__title {
+    font-size: 2.04rem;
+  }
+}
 .intro__subtitle {
+  width: 90%;
+  text-align: center;
   font-size: 1.1rem;
   font-weight: normal;
   margin-bottom: 7%;
+}
+@media screen and (min-width: 1025px) {
+  .intro__subtitle {
+    font-size: 1.32rem;
+  }
 }
 
 .explain {
@@ -548,11 +655,27 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media screen and (min-width: 1025px) {
+  .explain {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 450px;
+    width: 30%;
+    align-items: flex-start;
+  }
+}
 .explain__title {
   font-size: 1.5rem;
   font-weight: bold;
   padding-top: 30px;
   margin-bottom: 0;
+}
+@media screen and (min-width: 1025px) {
+  .explain__title {
+    font-size: 1.8rem;
+  }
 }
 .explain__list {
   height: 75%;
@@ -564,6 +687,12 @@ body {
   list-style: none;
   counter-reset: explain;
 }
+@media screen and (min-width: 1025px) {
+  .explain__list {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
 .explain__list__item {
   width: 98%;
   height: 70px;
@@ -574,6 +703,14 @@ body {
   align-items: center;
   font-weight: bold;
   position: relative;
+}
+@media screen and (min-width: 1025px) {
+  .explain__list__item {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 84px;
+    padding-left: 2%;
+  }
 }
 .explain__list__item .icon {
   margin-left: 2rem;
@@ -595,6 +732,14 @@ body {
   position: absolute;
   left: -12.5px;
 }
+@media screen and (min-width: 1025px) {
+  .explain__list__item::before {
+    width: 30px;
+    height: 30px;
+    left: -15px;
+    font-size: 0.96rem;
+  }
+}
 
 .restau-sect {
   height: auto;
@@ -607,12 +752,30 @@ body {
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 1025px) {
+  .restau-sect__title {
+    font-size: 1.8rem;
+  }
+}
 .restau-sect__content {
   height: auto;
 }
 .restau-sect__content .card-container {
   height: auto;
   width: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .restau-sect__content .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+.restau-sect__content > .zone {
+  border-radius: 1rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

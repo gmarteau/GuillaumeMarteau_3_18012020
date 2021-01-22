@@ -11,8 +11,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include desktop-only {
+        display: none;
+    }
     &__name {
         margin-left: 1rem;
+    }
+    &.zone--desktop {
+        display: none;
+        @include desktop-only {
+            width: 25%;
+            height: $where-height;
+            @include bg-lighten($clr-tertiary, 15%);
+            display: flex;
+            justify-content: center;
+            align-items: center;                   
+        }
+    }
+}
+
+.wrap {
+    &__intro {
+        @include desktop-only {
+            display: flex;
+        }
     }
 }
 
@@ -24,17 +46,31 @@
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+    @include desktop-only {
+        @include intro-desktop-dim;
+        width: 60%;
+        border-radius: $item-radius;
+        justify-content: space-evenly;
+    }
     &__title {
         width: 75%;
         font-size: map-get($font-size, big);
         font-weight: bold;
         margin-top: 10%;
         margin-bottom: 0;
+        @include desktop-only {
+            font-size: map-get($font-size, big) * $dsktp-font-multiplier;
+        }
     }
     &__subtitle {
+        width: 90%;
+        text-align: center;
         font-size: map-get($font-size, mid-plus);
         font-weight: normal;
         margin-bottom: 7%;
+        @include desktop-only {
+            font-size: map-get($font-size, mid-plus) * $dsktp-font-multiplier;
+        }
     }
 }
 
@@ -43,11 +79,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include desktop-only {
+        @include intro-desktop-dim;
+        width: 30%;
+        align-items: flex-start;
+    }
     &__title {
         font-size: map-get($font-size, big-min);
         font-weight: bold;
         padding-top: 30px;
         margin-bottom: 0;
+        @include desktop-only {
+            font-size: map-get($font-size, big-min) * $dsktp-font-multiplier;
+        }
     }
     &__list {
         height: 75%;
@@ -58,6 +102,10 @@
         align-items: flex-end;
         list-style: none;
         counter-reset: explain;
+        @include desktop-only {
+            width: 100%;
+            align-items: flex-start;
+        }
         &__item {
             @include box-style(explain);
             @include bg-lighten($clr-tertiary, 20%);
@@ -65,12 +113,24 @@
             align-items: center;
             font-weight: bold;
             position: relative;
+            @include desktop-only {
+                font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
+                width: 100%;
+                height: $item-height * $dsktp-font-multiplier;
+                padding-left: 2%;
+            }
             .icon {
                 margin-left: 2rem;
                 margin-right: 2rem;
             }
             &::before {
                 @include ol-style;
+                @include desktop-only {
+                    width: $ol-nbr-size * $dsktp-font-multiplier;
+                    height: $ol-nbr-size * $dsktp-font-multiplier;
+                    left: -(($ol-nbr-size*$dsktp-font-multiplier) / 2);
+                    font-size: map-get($font-size, small) * $dsktp-font-multiplier;                
+                }
             }
         }
     }
@@ -84,12 +144,26 @@
         padding-top: 50px;
         margin-bottom: 20px;
         font-size: map-get($font-size, big-min);
+        @include desktop-only {
+            font-size: map-get($font-size, big-min) * $dsktp-font-multiplier;
+        }
     }
     &__content {
         height: auto;
         .card-container {
             height: auto;
             width: 100%;
+            @include desktop-only {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+        }
+        > .zone {
+            border-radius: $item-radius;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
         }
     }
 }

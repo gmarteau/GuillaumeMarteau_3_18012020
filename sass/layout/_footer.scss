@@ -9,10 +9,20 @@
     padding-top: $ftr-pdg;
     padding-bottom: $ftr-pdg;
     font-size: map-get($font-size, mid);
+    @include desktop-only {
+        margin-top: 0;
+        text-align: center;
+        padding-top: $ftr-pdg * $dsktp-font-multiplier;
+        padding-bottom: $ftr-pdg * $dsktp-font-multiplier;    
+    }
     .logo {
         margin-top: 0;
         margin-bottom: 20px;
         font-size: map-get($font-size, mid-plus);
+        @include desktop-only {
+            font-size: map-get($font-size, big);
+            margin-bottom: 30px;
+        }
     }
     &__list {
         list-style-type: none;
@@ -22,12 +32,19 @@
         margin-bottom: 0;
         &__item {
             margin-bottom: 5px;
+            @include desktop-only {
+                margin-bottom: 15px;
+                font-size: map-get($font-size, mid-plus);
+            }
             em {
                 font-weight: bold;
                 font-style: normal;
             }
             .icon {
                 margin-right: 10px;
+                @include desktop-only {
+                    font-size: $icon-size;
+                }
             }
             a {
                 color: #fff;

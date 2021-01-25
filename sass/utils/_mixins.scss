@@ -100,7 +100,7 @@
 @mixin list-item-justify {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     padding-top: 12px;
     padding-bottom: 0;

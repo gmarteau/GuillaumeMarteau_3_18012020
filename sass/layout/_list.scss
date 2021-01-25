@@ -44,7 +44,7 @@
             @include no-block-margin;
             @include txt-overflow;
             max-width: 80%;
-            flex: 5;
+            width: 75%;
             padding-bottom: 12px;
             @include desktop-only {
                 font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
@@ -63,22 +63,26 @@
         &__price {
             @include no-block-margin;
             font-weight: bold;
-            margin-left: 20px;
+            margin-left: 5%;
             padding-bottom: 12px;
-            flex: 1;
+            width: 10%;
             transform: translateX(200%);
             transform-origin: right;
             transition: transform $transition-short $bez-slow-end;
             @include desktop-only {
                 font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
-                padding-bottom: 20px;  
+                padding-bottom: 20px;
+                margin-left: 10%; 
+            }
+            @include tablet-only {
+                margin-left: 10%;
             }
         }
         &__select {
-            flex: 2;
+            width: 25%;
             height: $item-height;
             background-color: $clr-tertiary;
-            margin-left: 20px;
+            margin-left: 5%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,6 +91,10 @@
             transition: transform $transition-short $bez-slow-end;
             @include desktop-only {
                 height: $item-height * 1.5;
+                margin-left: 10%;
+            }
+            @include tablet-only {
+                margin-left: 10%;
             }
             > .icon {
                 transform: rotate(0);

@@ -4,7 +4,9 @@
   "description": "Repo du projet 3 de la formation [OC]Développeur Web / Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "sass-min": "sass --watch ./sass/main.scss:./css/style-min.css --style compressed",
+    "prefix": "postcss ./css/style-min.css --use autoprefixer -d ./css-prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +14,7 @@
   },
   "author": "Guillaume Marteau",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/gmarteau/GuillaumeMarteau_3_18012020/issues"
   },

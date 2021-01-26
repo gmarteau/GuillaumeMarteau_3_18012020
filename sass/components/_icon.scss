@@ -34,7 +34,7 @@
                 cursor: pointer;
             }
         }
-        &:active {
+        &:focus {
             cursor: pointer;
             > .icon--filled {
                 transform: scale(1);

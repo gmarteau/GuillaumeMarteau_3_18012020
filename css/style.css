@@ -120,10 +120,10 @@ body {
   transform: scale(1);
   cursor: pointer;
 }
-.icon.icon--tofill:active {
+.icon.icon--tofill:focus {
   cursor: pointer;
 }
-.icon.icon--tofill:active > .icon--filled {
+.icon.icon--tofill:focus > .icon--filled {
   transform: scale(1);
   cursor: pointer;
 }
@@ -174,7 +174,7 @@ body {
 .btn:hover::after {
   opacity: 1;
 }
-.btn:active::after {
+.btn:focus::after {
   opacity: 1;
 }
 .btn::after {
@@ -189,7 +189,7 @@ body {
   border-radius: 10rem;
   box-shadow: 0px 6px 2px #99E2D0;
   opacity: 0;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .card {
@@ -571,11 +571,11 @@ header .icon {
   box-shadow: 0px 3px 7px #99E2D0;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-end;
   padding-top: 12px;
   padding-bottom: 0;
-  padding-left: 10px;
+  padding-left: 3%;
   padding-right: 0;
   margin-bottom: 20px;
   position: relative;
@@ -617,9 +617,9 @@ header .icon {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 80%;
-  width: 75%;
+  min-width: 77%;
   padding-bottom: 12px;
+  transition: min-width 300ms ease-out;
 }
 @media screen and (min-width: 1025px) {
   .list__item__txt {
@@ -644,25 +644,19 @@ header .icon {
   font-weight: bold;
   margin-left: 5%;
   padding-bottom: 12px;
-  width: 10%;
-  transform: translateX(200%);
+  min-width: 10%;
+  transform: translateX(0);
   transform-origin: right;
-  transition: transform 200ms cubic-bezier(0.03, 0.73, 0, 0.99);
+  transition: transform 300ms ease-out;
 }
 @media screen and (min-width: 1025px) {
   .list__item__price {
     font-size: 1.2rem;
     padding-bottom: 20px;
-    margin-left: 10%;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-  .list__item__price {
-    margin-left: 10%;
   }
 }
 .list__item__select {
-  width: 25%;
+  min-width: 20%;
   height: 70px;
   background-color: #99E2D0;
   margin-left: 5%;
@@ -671,25 +665,19 @@ header .icon {
   align-items: center;
   transform: translateX(100%);
   transform-origin: right;
-  transition: transform 200ms cubic-bezier(0.03, 0.73, 0, 0.99);
+  transition: transform 300ms ease-out;
 }
 @media screen and (min-width: 1025px) {
   .list__item__select {
     height: 105px;
-    margin-left: 10%;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-  .list__item__select {
-    margin-left: 10%;
   }
 }
 .list__item__select > .icon {
   transform: rotate(0);
-  transition: transform 170ms 30ms ease-in-out;
+  transition: transform 200ms 100ms ease-in-out;
 }
-.list__item:hover > .list__item__price {
-  transform: translateX(0);
+.list__item:hover > .list__item__txt {
+  min-width: 47%;
 }
 .list__item:hover > .list__item__select {
   transform: translateX(0);
@@ -697,13 +685,13 @@ header .icon {
 .list__item:hover > .list__item__select > .icon {
   transform: rotate(360deg);
 }
-.list__item:active > .list__item__price {
+.list__item:focus > .list__item__txt {
+  min-width: 47%;
+}
+.list__item:focus > .list__item__select {
   transform: translateX(0);
 }
-.list__item:active > .list__item__select {
-  transform: translateX(0);
-}
-.list__item:active > .list__item__select > .icon {
+.list__item:focus > .list__item__select > .icon {
   transform: rotate(360deg);
 }
 

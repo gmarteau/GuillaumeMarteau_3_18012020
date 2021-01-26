@@ -43,9 +43,9 @@
         &__txt {
             @include no-block-margin;
             @include txt-overflow;
-            max-width: 80%;
-            width: 75%;
+            min-width: 77%;
             padding-bottom: 12px;
+            transition: min-width $transition-short ease-out;
             @include desktop-only {
                 font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
                 height: 100%;
@@ -65,21 +65,17 @@
             font-weight: bold;
             margin-left: 5%;
             padding-bottom: 12px;
-            width: 10%;
-            transform: translateX(200%);
+            min-width: 10%;
+            transform: translateX(0);
             transform-origin: right;
-            transition: transform $transition-short $bez-slow-end;
+            transition: transform $transition-short ease-out;
             @include desktop-only {
                 font-size: map-get($font-size, mid) * $dsktp-font-multiplier;
                 padding-bottom: 20px;
-                margin-left: 10%; 
-            }
-            @include tablet-only {
-                margin-left: 10%;
             }
         }
         &__select {
-            width: 25%;
+            min-width: 20%;
             height: $item-height;
             background-color: $clr-tertiary;
             margin-left: 5%;
@@ -88,22 +84,18 @@
             align-items: center;
             transform: translateX(100%);
             transform-origin: right;
-            transition: transform $transition-short $bez-slow-end;
+            transition: transform $transition-short ease-out;
             @include desktop-only {
                 height: $item-height * 1.5;
-                margin-left: 10%;
-            }
-            @include tablet-only {
-                margin-left: 10%;
             }
             > .icon {
                 transform: rotate(0);
-                transition: transform 170ms 30ms ease-in-out;
+                transition: transform 200ms 100ms ease-in-out;
             }
         }
         &:hover {
-            > .list__item__price {
-                transform: translateX(0);
+            > .list__item__txt {
+                min-width: 47%;
             }
             > .list__item__select {
                 transform: translateX(0);
@@ -112,9 +104,9 @@
                 }
             }
         }
-        &:active {
-            > .list__item__price {
-                transform: translateX(0);
+        &:focus {
+            > .list__item__txt {
+                min-width: 47%;
             }
             > .list__item__select {
                 transform: translateX(0);

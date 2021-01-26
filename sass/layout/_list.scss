@@ -93,27 +93,34 @@
                 transition: transform 200ms 100ms ease-in-out;
             }
         }
+        &:active {
+            > .list__item__txt {
+                min-width: 47%;
+            }
+            > .list__item__select {
+                transform: translateX(0);
+                > .icon {
+                    transform: rotate(360deg);
+                }
+            }
+        }
         &:hover {
             > .list__item__txt {
-                min-width: 47%;
+                @include desktop-only {
+                    min-width: 47%;
+                }
             }
             > .list__item__select {
-                transform: translateX(0);
+                @include desktop-only {
+                    transform: translateX(0);
+                }
                 > .icon {
+                    @include desktop-only {
                     transform: rotate(360deg);
+                    }
                 }
             }
         }
-        &:focus {
-            > .list__item__txt {
-                min-width: 47%;
-            }
-            > .list__item__select {
-                transform: translateX(0);
-                > .icon {
-                    transform: rotate(360deg);
-                }
-            }
-        }
+
     }
 }

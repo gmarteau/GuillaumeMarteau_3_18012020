@@ -14,10 +14,12 @@
     }
     &:hover {
         &::after {
-            opacity: 1;
+            @include desktop-only {
+                opacity: 1;
+            }
         }
     }
-    &:focus {
+    &:active {
         &::after {
             opacity: 1;
         }

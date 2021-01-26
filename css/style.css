@@ -113,19 +113,19 @@ body {
 .icon.icon--tofill {
   position: relative;
 }
-.icon.icon--tofill:hover {
-  cursor: pointer;
+@media screen and (min-width: 1025px) {
+  .icon.icon--tofill:hover {
+    cursor: pointer;
+  }
 }
-.icon.icon--tofill:hover > .icon--filled {
+@media screen and (min-width: 1025px) {
+  .icon.icon--tofill:hover > .icon--filled {
+    transform: scale(1);
+    cursor: pointer;
+  }
+}
+.icon.icon--tofill:active > .icon--filled {
   transform: scale(1);
-  cursor: pointer;
-}
-.icon.icon--tofill:focus {
-  cursor: pointer;
-}
-.icon.icon--tofill:focus > .icon--filled {
-  transform: scale(1);
-  cursor: pointer;
 }
 .icon.icon--filled {
   position: absolute;
@@ -171,10 +171,12 @@ body {
     width: 72%;
   }
 }
-.btn:hover::after {
-  opacity: 1;
+@media screen and (min-width: 1025px) {
+  .btn:hover::after {
+    opacity: 1;
+  }
 }
-.btn:focus::after {
+.btn:active::after {
   opacity: 1;
 }
 .btn::after {
@@ -676,23 +678,29 @@ header .icon {
   transform: rotate(0);
   transition: transform 200ms 100ms ease-in-out;
 }
-.list__item:hover > .list__item__txt {
+.list__item:active > .list__item__txt {
   min-width: 47%;
 }
-.list__item:hover > .list__item__select {
+.list__item:active > .list__item__select {
   transform: translateX(0);
 }
-.list__item:hover > .list__item__select > .icon {
+.list__item:active > .list__item__select > .icon {
   transform: rotate(360deg);
 }
-.list__item:focus > .list__item__txt {
-  min-width: 47%;
+@media screen and (min-width: 1025px) {
+  .list__item:hover > .list__item__txt {
+    min-width: 47%;
+  }
 }
-.list__item:focus > .list__item__select {
-  transform: translateX(0);
+@media screen and (min-width: 1025px) {
+  .list__item:hover > .list__item__select {
+    transform: translateX(0);
+  }
 }
-.list__item:focus > .list__item__select > .icon {
-  transform: rotate(360deg);
+@media screen and (min-width: 1025px) {
+  .list__item:hover > .list__item__select > .icon {
+    transform: rotate(360deg);
+  }
 }
 
 * {

@@ -28,17 +28,19 @@
     &.icon--tofill {
         position: relative;
         &:hover {
+            @include desktop-only {
             cursor: pointer;
+            }
             > .icon--filled {
-                transform: scale(1);
-                cursor: pointer;
+                @include desktop-only {
+                    transform: scale(1);
+                    cursor: pointer;    
+                }
             }
         }
-        &:focus {
-            cursor: pointer;
+        &:active {
             > .icon--filled {
                 transform: scale(1);
-                cursor: pointer;
             }
         }
     }

@@ -255,7 +255,7 @@ body {
   color: black;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
   padding: 1rem;
   margin: 0;
   line-height: 1rem;
